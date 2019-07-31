@@ -1,4 +1,4 @@
-*{
+s*{
    margin: 0;
    padding: 0;
    box-sizing: border-box;	
@@ -10,9 +10,9 @@ body{
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
-	background: linear-gradient(rgb(47,150,163), rgb(48, 62, 143));
+	background: linear-gradient(90deg, rgba(12,11,31,1) 0%, rgba(24,71,60,0.3113620448179272) 40%, rgba(0,212,255,1) 100%);
 	font-family: sans-serif;
-	color: white;
+	color: black;
 }
 
 .location,
@@ -46,15 +46,26 @@ body{
 }
 
 .heading h1 {
-	margin: 1em 0 0.5em 0;
-	color: white;
-	font-weight: normal;
-	font-family: 'cursor', sans-serif;   
-	font-size: 36px;
-	line-height: 42px;
-	text-transform: uppercase;
-    
-      color: #FFFFFF;
-    text-shadow: -1px 0 0 #000000, 1px 1px 0 #000000,
-             2px -1px 0 #000000, 3px 0 0 #000000;
+	position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 3em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
 }
